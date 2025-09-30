@@ -1,0 +1,210 @@
+
+<!-- saved from url=(0041)file:///E:/Users/Aibol/Desktop/index.html -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>html
+
+
+
+  
+  <title>Приглашение на День учителя</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #fff5f5, #ffeaea);
+      color: #333;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Золотые узоры по бокам */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      width: 120px;
+      height: 100%;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255,215,0,0.15) 0,
+        rgba(255,215,0,0.15) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      z-index: 0;
+    }
+    body::before { left: 0; }
+    body::after { right: 0; }
+
+    header {
+      background: linear-gradient(135deg, #b3001b, #ff4d4d);
+      color: white;
+      padding: 60px 20px;
+      border-bottom: 8px solid #990014;
+      position: relative;
+      z-index: 1;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, gold, #ff4d4d, gold);
+      animation: shine 6s linear infinite;
+    }
+    h1 {
+      margin: 0;
+      font-size: 48px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+      animation: fadeIn 2s ease;
+    }
+    .content {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 50px;
+      background: rgba(255,255,255,0.97);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(179,0,27,0.3);
+      border: 3px solid gold;
+      line-height: 1.9;
+      position: relative;
+      z-index: 1;
+      animation: slideUp 1.5s ease;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 22px;
+    }
+    .date-time {
+      font-size: 22px;
+      margin: 40px 0;
+      font-weight: bold;
+      color: #b3001b;
+    }
+    #countdown {
+      font-size: 26px;
+      margin: 30px 0;
+      color: #e60026;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      background: #ffebeb;
+      color: #990014;
+      font-style: italic;
+      border-top: 5px solid gold;
+      font-size: 20px;
+      z-index: 1;
+      position: relative;
+    }
+    /* Анимации */
+    @keyframes shine {
+      0% { background-position: 0 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Блёстки */
+    .sparkle {
+      position: fixed;
+      top: -10px;
+      width: 8px;
+      height: 8px;
+      background: gold;
+      border-radius: 50%;
+      opacity: 0.9;
+      animation: fall linear forwards, twinkle 1.5s infinite alternate;
+      z-index: 999;
+      box-shadow: 0 0 6px gold;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+    @keyframes twinkle {
+      from { opacity: 0.4; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+  </style>
+
+
+  <header>
+    <h1>Дорогие педагоги!</h1>
+  </header>
+
+  <div class="content">
+    <p>Сердечно приглашаем вас на праздничное торжество, посвящённое <b>Дню учителя</b>.</p>
+    <p>В этот день мы хотим выразить вам искреннюю благодарность за ваш труд, терпение и заботу, 
+    за то, что вы щедро делитесь своими знаниями и душевным теплом.</p>
+    <p>Вы вдохновляете, наставляете, открываете новые горизонты знаний. Благодаря вам каждый день — это шаг к будущему.</p>
+    <p>Ваше терпение, поддержка и доброта делают школу местом, куда хочется возвращаться.</p>
+    <p>Мы хотим, чтобы этот праздник стал для вас источником радости, уважения и тепла.</p>
+    <p>Каждое слово благодарности в этот день — это маленький вклад в то огромное дело, которое вы совершаете каждый день.</p>
+    <p>И пусть в этот праздник в ваших сердцах зажгутся самые яркие огни радости и гордости!</p>
+    <p><b>Будем счастливы разделить этот день вместе с вами!</b></p>
+
+    <div class="date-time">
+      📅 Дата: 3 октября 2025 <br>
+      ⏰ Время: 11:00 <br>
+      📍 Место: школа №14, актовый зал
+    </div>
+
+    <div id="countdown">До праздника осталось: 2д 16ч 6м 31с</div>
+  </div>
+
+  <footer>
+    ✨ С уважением и благодарностью — ваши ученики ✨
+  </footer>
+
+  <script>
+    // Обратный отсчёт
+    const eventDate = new Date("October 3, 2025 11:00:00").getTime();
+    const countdown = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "Праздник уже начался!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `До праздника осталось: ${days}д ${hours}ч ${minutes}м ${seconds}с`;
+    }, 1000);
+
+    // Генерация блёсток
+    function createSparkle() {
+      const sparkle = document.createElement("div");
+      sparkle.className = "sparkle";
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.animationDuration = (3 + Math.random() * 5) + "s, 1.5s";
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => sparkle.remove(), 8000);
+    }
+
+    setInterval(createSparkle, 300);
+  </script>
+
+
+<div class="sparkle" style="left: 62.1981vw; animation-duration: 3.31107s, 1.5s;"></div><div class="sparkle" style="left: 16.7097vw; animation-duration: 6.88005s, 1.5s;"></div><div class="sparkle" style="left: 98.9287vw; animation-duration: 3.26084s, 1.5s;"></div><div class="sparkle" style="left: 77.2124vw; animation-duration: 6.85387s, 1.5s;"></div><div class="sparkle" style="left: 65.2553vw; animation-duration: 3.90895s, 1.5s;"></div><div class="sparkle" style="left: 17.6969vw; animation-duration: 6.28355s, 1.5s;"></div><div class="sparkle" style="left: 86.4365vw; animation-duration: 7.56966s, 1.5s;"></div><div class="sparkle" style="left: 75.4618vw; animation-duration: 3.82924s, 1.5s;"></div><div class="sparkle" style="left: 91.3099vw; animation-duration: 4.4641s, 1.5s;"></div><div class="sparkle" style="left: 17.5242vw; animation-duration: 3.74928s, 1.5s;"></div><div class="sparkle" style="left: 56.0378vw; animation-duration: 6.16383s, 1.5s;"></div><div class="sparkle" style="left: 91.5803vw; animation-duration: 7.31303s, 1.5s;"></div><div class="sparkle" style="left: 17.6911vw; animation-duration: 7.35807s, 1.5s;"></div><div class="sparkle" style="left: 70.0212vw; animation-duration: 4.81981s, 1.5s;"></div><div class="sparkle" style="left: 50.6035vw; animation-duration: 3.53408s, 1.5s;"></div><div class="sparkle" style="left: 46.3105vw; animation-duration: 7.54965s, 1.5s;"></div><div class="sparkle" style="left: 18.9281vw; animation-duration: 7.61627s, 1.5s;"></div><div class="sparkle" style="left: 61.8458vw; animation-duration: 5.13301s, 1.5s;"></div><div class="sparkle" style="left: 42.78vw; animation-duration: 3.46492s, 1.5s;"></div><div class="sparkle" style="left: 13.9959vw; animation-duration: 5.40635s, 1.5s;"></div><div class="sparkle" style="left: 16.145vw; animation-duration: 3.74288s, 1.5s;"></div><div class="sparkle" style="left: 42.0034vw; animation-duration: 7.63065s, 1.5s;"></div><div class="sparkle" style="left: 90.3665vw; animation-duration: 6.75838s, 1.5s;"></div><div class="sparkle" style="left: 45.9527vw; animation-duration: 6.4776s, 1.5s;"></div><div class="sparkle" style="left: 63.5506vw; animation-duration: 7.2528s, 1.5s;"></div><div class="sparkle" style="left: 43.5482vw; animation-duration: 7.23602s, 1.5s;"></div><div class="sparkle" style="left: 22.4232vw; animation-duration: 6.6004s, 1.5s;"></div></body></html>
